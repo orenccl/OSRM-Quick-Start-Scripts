@@ -1,0 +1,3 @@
+podman run --name osrm-cycling -d -p 5000:5000 -v $(pwd)/osrm-cycling:/data osrm/osrm-backend osrm-routed --algorithm mld /data/taiwan-latest.osm.pbf
+podman run --name osrm-driving -d -p 5001:5000 -v $(pwd)/osrm-driving:/data osrm/osrm-backend osrm-routed --algorithm mld /data/taiwan-latest.osm.pbf
+podman run --name osrm-walking -d -p 5002:5000 -v $(pwd)/osrm-walking:/data osrm/osrm-backend osrm-routed --algorithm mld /data/taiwan-latest.osm.pbf
